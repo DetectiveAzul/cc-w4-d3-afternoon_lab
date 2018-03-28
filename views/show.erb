@@ -1,0 +1,8 @@
+  <div class="order">
+   <fieldset>
+     <legend>Order #<%= @order.id %></legend>
+     <p>Name: <%= @order.pretty_name() %></p>
+     <p>Order: <%= @order.topping() %> x <%= @order.quantity() %> </p>
+     <p>Total: <%= @order.total() %></p>
+  </fieldset>
+  </div>

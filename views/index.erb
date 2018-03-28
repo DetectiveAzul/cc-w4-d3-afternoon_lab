@@ -1,0 +1,15 @@
+<h3>All the pizzas!</h3>
+<% @orders.each do |order| %>
+  <div class="order">
+    <fieldset>
+     <p>Name: <%= order.pretty_name() %></p>
+     <p>Order: <%= order.topping() %> x <%= order.quantity() %> </p>
+     <p>Total: <%= order.total() %></p>
+     <p><a href="/pizza_orders/<%= order.id%>">Show Order</a></p>
+     <form method="post" action="/pizza_orders/<%=order.id%>/delete">
+       <input type="submit" value="Delete Order">
+       <a href="/pizza_orders/<%= order.id%>/edit"><button type="button">Edit Order</button></a>
+     </form>
+   </fieldset>
+  </div>
+<% end %>
