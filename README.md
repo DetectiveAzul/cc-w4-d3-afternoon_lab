@@ -1,31 +1,36 @@
-# Pizza Shop Lab
+#CSS and HTML
 
-We're about halfway finished on our RESTful pizza shop web app. We still need to add routes for `edit`, `update` `show` and `delete` actions.
+## MVP
 
-Funnily enough, that's exactly what we're doing in this lab! Go ahead and write these routes and finish our app.
+To recap what we did today, go trough this wonderful learning resource / game
 
-Annoyingly, we can't use DELETE or PUT requests in the browser, we just use POST for them.
+- https://flukeout.github.io/
 
-Our REST table should then look like this:
+Test if you understood all the CSS referencing tricks from flukeout by styling your pizza shop.
 
-|VERB  |PATH                    |ACTION |
-|:----:|:----------------------:|:-----:|
-|GET   |/pizza-orders           |index  |
-|GET   |/pizza-orders/:id       |show   |
-|GET   |/pizza-orders/new       |new    |
-|POST  |/pizza-orders           |create |
-|GET   |/pizza-orders/:id/edit  |edit   |
-|POST  |/pizza-orders/:id       |update |
-|POST  |/pizza-orders/:id/delete|destroy|
+Try to complete these without using any classes. If impossible use as little classes as possible (basically)
 
-All POST routes must be sent from `<form>`s.
+- give delete button some red margins
+- make pizza name have a larger font and text should be bold
+- pizza list items should have interchangeable a background color. Say odd orders orange, even orders yellow.
+- make all the text in the top-most pizza gray (to indicate that it is being processing)
 
-## Hints
+Mini Extension:
+- put each pizza in a div and give that div a class that says what type it is eg. `class="pizza margarita"`
+- Is there a way to group pizzas (using a grey border) of the same type that appear one after another? (so that the cooks have an easier job preparing many of the same pizzas). [hint: this is hard / impossible]
 
-* Start with the `delete` route. It is the easiest one, as it only does one thing. You can either make it an instance method, and delete the current object. Or add a `self.delete(id)` method which uses the id in the URL to identify which order to delete.
-* Although the `delete` route is easy, it relies on a POST request, because it is changing the resource on the server. Unfortunately we can't make a hyperlink to a POST request, we have to use a button inside a `<form>` with its method and action properly set. You saw how to do this in the `new` form!
-* After the deleting a pizza, it might be sensible to send the user back to the list of all pizzas, which is called a _redirect_. Find out how to make this happen with Sinatra.
-* Your `edit` route will probably take users to a form, just like the `new` route. Only this time, the form should be populated with the correct data for the order we want to edit.
-* Your `update` route will probably look a lot like the `create` route!
-* Your `show` route will select one pizza from the database and display it's details. HINT: It will have to go after the `new` route.
-* Remember to add links where appropriate! These might be on the nav bar so they are always visible, or they might be on every item in the `index`, or might be on the `show` view... It's up to you!
+## Extensions
+
+To prepare for tomorrow, have a look at these resources about flexbox:
+
+- css tricks flex https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+Have a go at completing this layout game (at least first 5-10 levels):
+
+- Flexbox froggy http://flexboxfroggy.com/
+
+## Further Extensions
+
+You can try to apply a flex box styling to your pizza shop. But remember to git commit it somewhere before, because you will likely break it.
+
+Read over the code from today and see if you can follow it through.

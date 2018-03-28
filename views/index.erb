@@ -1,9 +1,9 @@
 <h3>All the pizzas!</h3>
 <% @orders.each do |order| %>
-  <div class="order">
+  <div class="order <%= order.topping.downcase %>">
     <fieldset>
      <p>Name: <%= order.pretty_name() %></p>
-     <p>Order: <%= order.topping() %> x <%= order.quantity() %> </p>
+     <p>Order: <div class="pizza"><%= order.topping() %></div> x <%= order.quantity() %> </p>
      <p>Total: <%= order.total() %></p>
      <form method="post" action="/pizza_orders/<%=order.id%>/delete">
        <a href="/pizza_orders/<%= order.id%>"><button type="button">Show Order</button></a>

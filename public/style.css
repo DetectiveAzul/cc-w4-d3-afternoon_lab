@@ -1,0 +1,20 @@
+input[value^='Delete'] {
+  border: 5px solid red;
+}
+.order:nth-of-type(odd) {
+  background-color: orange;
+}
+
+.order:nth-of-type(even) {
+  background-color: green;
+}
+
+.order:first-of-type {
+  color: gray;
+}
+
+.pizza {
+  font-weight: bold;
+  font-size: 18px;
+  display: inline;
+}
